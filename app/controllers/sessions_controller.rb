@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 	def create
-     debugger
+     # debugger
       user = User.find_by(username: params[:session][:username])
         if user
           log_in(user)
