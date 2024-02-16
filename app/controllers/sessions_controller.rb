@@ -2,11 +2,11 @@ class SessionsController < ApplicationController
 	def create
      # debugger
       user = User.find_by(username: params[:session][:username])
-        if user
+     if user
           log_in(user)
 		else
-        redirect_to new_session_path, alert: "Invalid username."
-        end
+        redirect_to new_user_path, alert: "Invalid username."
+    end
 	end
 
 	def destroy
