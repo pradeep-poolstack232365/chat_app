@@ -2,4 +2,5 @@
   <%= f.text_field :name, class: "form-control", autocomplete: 'off' %>
   <%= f.submit data: { disable_with: false } %>
 <% end %>
+<%= link_to 'Sign Out', signout_path,  :method => :delete %>
 
